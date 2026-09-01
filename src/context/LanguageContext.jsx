@@ -13,12 +13,12 @@ export const LanguageProvider = ({ children }) => {
     return localStorage.getItem('censusconnect_fontsize') || 'normal';
   });
 
-  // Page Routing State: default to landing page
+  // Page Routing State: default to home dashboard
   const [currentPage, setCurrentPage] = useState(() => {
     const hash = window.location.hash.replace('#', '');
     const validPages = ['landing', 'login', 'home', 'phases', 'schedule', 'ai-guide', 'prepare', 'safety', 'misinfo', 'insights'];
     if (validPages.includes(hash)) return hash;
-    return 'landing';
+    return 'home';
   });
 
   const [activeSpeakingId, setActiveSpeakingId] = useState(null);

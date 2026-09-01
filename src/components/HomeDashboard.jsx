@@ -168,64 +168,64 @@ export const HomeDashboard = () => {
       id: 'phases',
       icon: Home,
       color: 'blue',
-      title: tObj.cards.phases.title,
-      desc: tObj.cards.phases.desc,
-      btnText: tObj.cards.phases.action,
-      audio: tObj.phases.audioText
+      title: tObj?.cards?.phases?.title || t('cards.phases.title'),
+      desc: tObj?.cards?.phases?.desc || t('cards.phases.desc'),
+      btnText: tObj?.cards?.phases?.action || t('cards.phases.action'),
+      audio: tObj?.phases?.audioText || t('phases.audioText')
     },
     {
       id: 'schedule',
       icon: Calendar,
       color: 'cyan',
-      title: tObj.cards.schedule.title,
-      desc: tObj.cards.schedule.desc,
-      btnText: tObj.cards.schedule.action,
-      audio: "Check your state census schedule for online registration and enumerator survey visits."
+      title: tObj?.cards?.schedule?.title || t('cards.schedule.title'),
+      desc: tObj?.cards?.schedule?.desc || t('cards.schedule.desc'),
+      btnText: tObj?.cards?.schedule?.action || t('cards.schedule.action'),
+      audio: tObj?.schedule?.subtitle || "Check your state census schedule for online registration and enumerator survey visits."
     },
     {
       id: 'ai-guide',
       icon: Bot,
       color: 'teal',
-      title: tObj.cards.aiGuide.title,
-      desc: tObj.cards.aiGuide.desc,
-      btnText: tObj.cards.aiGuide.action,
-      audio: tObj.aiGuide.greeting
+      title: tObj?.cards?.aiGuide?.title || t('cards.aiGuide.title'),
+      desc: tObj?.cards?.aiGuide?.desc || t('cards.aiGuide.desc'),
+      btnText: tObj?.cards?.aiGuide?.action || t('cards.aiGuide.action'),
+      audio: tObj?.aiGuide?.greeting || t('aiGuide.greeting')
     },
     {
       id: 'prepare',
       icon: CheckSquare,
       color: 'green',
-      title: tObj.cards.stepper.title,
-      desc: tObj.cards.stepper.desc,
-      btnText: tObj.cards.stepper.action,
-      audio: tObj.stepper.audioText
+      title: tObj?.cards?.stepper?.title || t('cards.stepper.title'),
+      desc: tObj?.cards?.stepper?.desc || t('cards.stepper.desc'),
+      btnText: tObj?.cards?.stepper?.action || t('cards.stepper.action'),
+      audio: tObj?.stepper?.audioText || t('stepper.audioText')
     },
     {
       id: 'safety',
       icon: Shield,
       color: 'blue',
-      title: tObj.cards.safety.title,
-      desc: tObj.cards.safety.desc,
-      btnText: tObj.cards.safety.action,
-      audio: tObj.safety.audioText
+      title: tObj?.cards?.safety?.title || t('cards.safety.title'),
+      desc: tObj?.cards?.safety?.desc || t('cards.safety.desc'),
+      btnText: tObj?.cards?.safety?.action || t('cards.safety.action'),
+      audio: tObj?.safety?.audioText || t('safety.audioText')
     },
     {
       id: 'misinfo',
       icon: Search,
       color: 'cyan',
-      title: tObj.cards.misinfo.title,
-      desc: tObj.cards.misinfo.desc,
-      btnText: tObj.cards.misinfo.action,
-      audio: "Check any forwarded message or link to see if it is safe or a scam risk."
+      title: tObj?.cards?.misinfo?.title || t('cards.misinfo.title'),
+      desc: tObj?.cards?.misinfo?.desc || t('cards.misinfo.desc'),
+      btnText: tObj?.cards?.misinfo?.action || t('cards.misinfo.action'),
+      audio: tObj?.misinfo?.subtitle || "Check any forwarded message or link to see if it is safe or a scam risk."
     },
     {
       id: 'insights',
       icon: BarChart3,
       color: 'teal',
-      title: tObj.cards.insights.title,
-      desc: tObj.cards.insights.desc,
-      btnText: tObj.cards.insights.action,
-      audio: tObj.insights.audioText
+      title: tObj?.cards?.insights?.title || t('cards.insights.title'),
+      desc: tObj?.cards?.insights?.desc || t('cards.insights.desc'),
+      btnText: tObj?.cards?.insights?.action || t('cards.insights.action'),
+      audio: tObj?.insights?.audioText || t('insights.audioText')
     }
   ];
 
