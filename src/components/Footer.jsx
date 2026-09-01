@@ -6,7 +6,9 @@ export const Footer = () => {
   const { navigateTo } = useLanguage();
 
   const quickLinks = [
-    { id: 'home',     label: 'Dashboard' },
+    { id: 'landing',  label: '✨ Welcome & Setup' },
+    { id: 'login',    label: '🔐 Citizen Login' },
+    { id: 'home',     label: '🏠 Main Dashboard' },
     { id: 'phases',   label: 'Census Phases' },
     { id: 'schedule', label: 'State Schedule' },
     { id: 'ai-guide', label: 'Aadya AI Guide' },

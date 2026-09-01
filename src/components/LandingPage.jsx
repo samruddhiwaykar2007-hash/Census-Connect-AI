@@ -27,7 +27,7 @@ export const LandingPage = () => {
 
   const handleContinue = () => {
     localStorage.setItem('censusconnect_onboarded', 'true');
-    navigateTo('home');
+    navigateTo('login');
   };
 
   return (

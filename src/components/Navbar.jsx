@@ -1,16 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Menu, X, Bot, Home, Calendar, Layers, Shield, CheckSquare, Search, BarChart3, Sparkles } from 'lucide-react';
+import { Menu, X, Bot, Home, Calendar, Layers, Shield, CheckSquare, Search, BarChart3, Sparkles, UserCircle2, LogIn } from 'lucide-react';
 
 export const Navbar = () => {
   const { t, currentPage, navigateTo } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('censusconnect_user');
+      if (stored) {
+        setUser(JSON.parse(stored));
+      }
+    } catch {
+      // ignore
+    }
+  }, [currentPage]);
 
   const handleGoToLanding = () => {
-    // Clear onboarding so the wizard shows again
     localStorage.removeItem('censusconnect_onboarded');
     setMobileMenuOpen(false);
     navigateTo('landing');
+  };
+
+  const handleGoToLogin = () => {
+    setMobileMenuOpen(false);
+    navigateTo('login');
   };
 
   const navLinks = [
@@ -72,14 +88,25 @@ export const Navbar = () => {
 
           {/* Right Action CTA */}
           <div className="navbar-actions">
-            {/* Reset Onboarding — back to wizard */}
+            {/* Citizen Login Button */}
+            <button
+              onClick={handleGoToLogin}
+              className={`btn-reset-onboarding ${user && user.name !== 'Guest' ? 'user-logged-in' : ''}`}
+              title={user && user.name !== 'Guest' ? `Logged in as ${user.name}` : "Citizen Login"}
+              id="navbar-citizen-login-btn"
+            >
+              {user && user.name !== 'Guest' ? <UserCircle2 size={16} /> : <LogIn size={15} />}
+              <span>{user && user.name !== 'Guest' ? user.name : "Citizen Login"}</span>
+            </button>
+
+            {/* Reset Onboarding — back to welcome */}
             <button
               onClick={handleGoToLanding}
               className="btn-reset-onboarding"
               title="Go back to the welcome wizard"
             >
               <Sparkles size={15} />
-              <span>Setup Guide</span>
+              <span>Welcome</span>
             </button>
 
             <button
@@ -123,6 +150,24 @@ export const Navbar = () => {
                   </button>
                 );
               })}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: '8px' }}>
+                <button
+                  onClick={handleGoToLogin}
+                  className="mobile-nav-item"
+                  style={{ justifyContent: 'center', background: '#F1F5F9' }}
+                >
+                  <UserCircle2 size={18} />
+                  <span>{user && user.name !== 'Guest' ? user.name : "Citizen Login"}</span>
+                </button>
+                <button
+                  onClick={handleGoToLanding}
+                  className="mobile-nav-item"
+                  style={{ justifyContent: 'center', background: '#F1F5F9' }}
+                >
+                  <Sparkles size={18} />
+                  <span>Welcome</span>
+                </button>
+              </div>
               <button
                 onClick={() => handleNavClick('ai-guide')}
                 className="btn-large btn-large-primary mobile-cta-full"
