@@ -1,47 +1,31 @@
-# CensusConnect AI 🇮🇳
-> Smart Guide for Census 2027 & Digital Enumeration
+🇮🇳 CensusConnect AI
 
-CensusConnect AI is an interactive, multilingual citizen portal designed to guide people through the Census 2027 process, support digital self-enumeration with an intelligent AI Guide, debunk misinformation, and explore demographic insights.
+A GenAI-powered multilingual digital Census companion built for the Census 2027 & Digital Enumeration challenge at PromptWars × ADYPU, organized by Hack2skill.
 
----
+CensusConnect AI aims to make Census information easier to understand and accessible, especially for digitally inexperienced users.
 
-## 🚀 Quick Start (Run on Localhost)
+✨ Features
 
-### 1. Install Dependencies
-```bash
-npm install
-```
+🤖 Aadya AI Census Guide for simple Census-related guidance
+🌐 Multilingual support — English, Hindi & Marathi
+🔊 Voice assistance in the selected language
+🏠 Simple explanation of the two Census phases
+📅 State-wise schedule guidance
+📝 Step-by-step self-enumeration preparation guide
+🔒 Privacy and digital safety awareness
+🔍 Misinformation and scam message checker
+📊 Interactive Census data visualization
 
-### 2. Start the Localhost Development Server
-```bash
-npm run dev
-```
+🛠️ Tech Stack
+React • Vite • JavaScript • Supabase • PostgreSQL • Web Speech API • Recharts • Vercel
 
-Your app will be available at:
-👉 **`http://localhost:3000`** (or `http://localhost:5173`)
+Demo link-
+https://census-connect-ai-dxcf.vercel.app/
 
-### 3. Build for Production
-```bash
-npm run build
-```
+🏆 Hackathon
 
----
+Built solo in just 4 hours under the PromptWars challenge.
 
-## 🌐 Deploy to Vercel (1-Click)
+🏅 Ranked 62 out of 230+ participants.
 
-1. Push this repository to **GitHub**.
-2. Go to [Vercel Dashboard](https://vercel.com/new).
-3. Import your GitHub repository.
-4. Framework Preset: **Vite** (automatically detected).
-5. Click **Deploy**.
-
----
-
-## 🛠️ Tech Stack
-- **React 19**
-- **Vite 6**
-- **Lucide React** (Icons)
-- **Recharts** (Interactive demographic charts)
-- **Canvas Confetti**
-- **Multilingual Support** (English, Hindi, Marathi)
-- **Text-to-Speech Accessibility**
+⚠️ Disclaimer: This is a hackathon prototype and not an official Government of India Census portal.
