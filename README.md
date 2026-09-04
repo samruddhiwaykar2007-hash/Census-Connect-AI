@@ -7,14 +7,24 @@ CensusConnect AI aims to make Census information easier to understand and access
 ✨ Features
 
 🤖 Aadya AI Census Guide for simple Census-related guidance
+
 🌐 Multilingual support — English, Hindi & Marathi
+
 🔊 Voice assistance in the selected language
+
 🏠 Simple explanation of the two Census phases
+
 📅 State-wise schedule guidance
+
 📝 Step-by-step self-enumeration preparation guide
+
 🔒 Privacy and digital safety awareness
+
 🔍 Misinformation and scam message checker
+
 📊 Interactive Census data visualization
+
+
 
 🛠️ Tech Stack
 React • Vite • JavaScript • Supabase • PostgreSQL • Web Speech API • Recharts • Vercel
